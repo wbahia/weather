@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section scripts {
+
+    <script src="~/App/Services/weatherService.js"></script>
+    <script src="~/App/Controllers/Cidade/cidadeController.js"></script>
+
+}
+
+<br /><br />
+<div ng-app="WeatherApp" ng-controller="cidadeController" ng-init="initCidade()" class="row">
+    <div class="container" style="text-align:center;">
+        <div class="panel panel-default" style="max-width:1100px;">
+            <div class="panel-heading" style="background-color: #333; color:white; height: 50px;">
+                <div class="pull-left" style="font-size: 20px;">
+                    Cidades
+                </div>
+
+            </div>
+
+            <table class="table" style="width:100%; overflow-x:scroll; max-height:600px;">
+                <thead class="text-bold">
+                    <tr class="text-center">
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Nome</th>
+                        <th class="text-center">Selecionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center" ng-repeat="x in cidades">
+                        <td>{{x.Id }}</td>
+                        <td>{{x.Nome}}</td>
+                        <td><button class="btn btn-default">Selecionar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
