@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.Proxy", "Weather.Proxy\Weather.Proxy.csproj", "{E80913B0-7DE6-472C-8036-FF4E90C55A26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherTest", "WeatherTest\WeatherTest.csproj", "{6F0D5049-F730-447E-A25B-E93620C02C2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{E80913B0-7DE6-472C-8036-FF4E90C55A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E80913B0-7DE6-472C-8036-FF4E90C55A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E80913B0-7DE6-472C-8036-FF4E90C55A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0D5049-F730-447E-A25B-E93620C02C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0D5049-F730-447E-A25B-E93620C02C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0D5049-F730-447E-A25B-E93620C02C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0D5049-F730-447E-A25B-E93620C02C2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{32E9BAAE-3E9E-465C-9F4A-130FA77913B5} = {D462A6B6-7A91-492B-8F53-314859DDC975}
 		{5CED967B-EE59-45FA-B11F-A8014529555E} = {EF6A3DE1-DD43-4D11-922E-CE9322E7AC25}
 		{E80913B0-7DE6-472C-8036-FF4E90C55A26} = {E84BBEEC-0AF0-4DB3-8719-6EA4DD84BA9A}
+		{6F0D5049-F730-447E-A25B-E93620C02C2A} = {E84BBEEC-0AF0-4DB3-8719-6EA4DD84BA9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49815B21-9C9A-47DB-8AE0-BF9A3D0751CE}

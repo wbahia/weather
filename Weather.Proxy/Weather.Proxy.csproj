@@ -47,8 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientConfig.cs" />
+    <Compile Include="Client\CurrentWeather.cs" />
+    <Compile Include="Client\FiveDaysForecast.cs" />
+    <Compile Include="Model\CurrentWeatherResult.cs" />
+    <Compile Include="Model\FiveDaysForecastResult.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\WeatherResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servico.cs" />
+    <Compile Include="Util\Api\ApiClient.cs" />
+    <Compile Include="Util\Data\Deserializer.cs" />
+    <Compile Include="Util\Data\TimeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
