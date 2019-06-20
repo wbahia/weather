@@ -4,7 +4,7 @@
 
         $scope.cidades = {};
         $scope.loading = false;
-        getCidades($scope, weatherService, $scope.rootUrl);
+        getCidades($scope, weatherService);
 
     }
 
