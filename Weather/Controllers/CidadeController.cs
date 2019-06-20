@@ -22,7 +22,8 @@ namespace Weather.Controllers
                     CidadeConsultaModel cidadeModel = new CidadeConsultaModel()
                     {
                         Nome = cidade.Nome,
-                        Id = cidade.Id
+                        Id = cidade.Id,
+                        IdAPI = cidade.IdAPI
                     };
 
                     listaCidadesModel.Add(cidadeModel);
@@ -50,9 +51,14 @@ namespace Weather.Controllers
 
         }
 
-        public ActionResult RedirecionarCadastro()
+        public ActionResult Cadastro()
         {
-            return View("CadastrarCidade");
+            return View("Cadastro");
+        }
+
+        public ActionResult Previsao(int idAPI)
+        {
+            return View("Previsao", idAPI);
         }
     }
 

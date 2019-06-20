@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\PrevisaoController .cs" />
     <Compile Include="Controllers\CidadeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -135,12 +136,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\Controllers\Cidade\previsaoController.js" />
     <Content Include="App\Controllers\Cidade\cidadeController.js" />
     <Content Include="App\Services\weatherService.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\previsao.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -943,8 +946,6 @@
     <Content Include="Scripts\sitemap.xml" />
     <Content Include="Scripts\tether.js" />
     <Content Include="Scripts\tether.min.js" />
-    <Content Include="Scripts\Util\Mascara.js" />
-    <Content Include="Scripts\Util\Validacao.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -958,7 +959,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\version.json" />
-    <Content Include="Views\Cidade\CadastrarCidade.cshtml" />
+    <Content Include="Views\Cidade\Cadastro.cshtml" />
+    <Content Include="Views\Cidade\Previsao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -985,6 +987,10 @@
     <ProjectReference Include="..\Weather.Domain\Weather.Domain.csproj">
       <Project>{5ced967b-ee59-45fa-b11f-a8014529555e}</Project>
       <Name>Weather.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weather.Proxy\Weather.Proxy.csproj">
+      <Project>{E80913B0-7DE6-472C-8036-FF4E90C55A26}</Project>
+      <Name>Weather.Proxy</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

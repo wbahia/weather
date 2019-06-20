@@ -51,6 +51,7 @@
     <Compile Include="Base\BaseManager.cs" />
     <Compile Include="Base\UnitOfWorkManager.cs" />
     <Compile Include="Manager\Cidade\CidadeManager.cs" />
+    <Compile Include="Manager\Previsao\PrevisaoManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

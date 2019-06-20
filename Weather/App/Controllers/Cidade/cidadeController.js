@@ -9,7 +9,11 @@
     }
 
     $scope.redirecionarFormCadastro = function () {
-        window.location.pathname = 'Cidade/RedirecionarCadastro'
+        window.location.pathname = 'Cidade/Cadastro'
+    }
+
+    $scope.redirecionarPrevisao = function (idAPI) {
+        window.location.href = "/Cidade/Previsao?idAPI=" + idAPI;
     }
 
     $scope.cadastrarCidade = function () {
@@ -47,6 +51,7 @@ function getCidades($scope, weatherService) {
 
         if (result != null) {
             $scope.cidades = result.Lista;
+            console.log(result.Lista);
         }
 
         $scope.loading = false;
