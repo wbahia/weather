@@ -16,7 +16,11 @@ namespace Weather.Domain.Model
             Nome = nome;
             IdAPI = idAPI;
         }
-
+        public Cidade(string nome, int idAPI)
+        {
+            Nome = nome;
+            IdAPI = idAPI;
+        }
         public Cidade()
         {
 

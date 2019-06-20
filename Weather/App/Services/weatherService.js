@@ -14,7 +14,6 @@
         var promise = $http(
             httpInfo
         ).then(function (response) {
-            console.log(response);
             return response.data;
         });
         return promise;

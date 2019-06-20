@@ -1,0 +1,30 @@
+﻿@section scripts {
+
+    <script src="~/App/Services/weatherService.js"></script>
+    <script src="~/App/Controllers/Cidade/cidadeController.js"></script>
+
+}
+
+<br /><br />
+<div ng-app="WeatherApp" ng-controller="cidadeController" class="row">
+    <div class="container">
+        <div class="panel panel-default" style="max-width:1100px;">
+            <div class="panel-heading" style="background-color: #333; color:white; height: 50px;">
+                <div class="pull-left" style="font-size: 20px;">
+                    Cadastrar Cidade
+                </div>
+            </div>
+            <div class="row">
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2" style="padding-left:20px;">
+                        <input type="text" ng-model="Cidade" class="form-control" id="txtCidade" placeholder="Nome da Cidade">
+                    </div>
+                    
+                    <button type="button" class="btn btn-default" ng-click="cadastrarCidade();">Cadastrar</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

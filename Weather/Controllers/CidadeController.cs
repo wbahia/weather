@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using Weather.BLL.Manager;
 using Weather.Domain.NotMapped;
 
@@ -33,6 +34,18 @@ namespace Weather.Controllers
             {
                 return Json(null, JsonRequestBehavior.AllowGet);
             }
+        }
+
+        public ActionResult CadastrarCidade(string nomeCidade)
+        {
+            var response = new CidadeManager().CadastrarCidade(nomeCidade);
+
+            return Json(new JavaScriptSerializer().Serialize(response));
+        }
+
+        public ActionResult RedirecionarCadastro()
+        {
+            return View("CadastrarCidade");
         }
     }
 

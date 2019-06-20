@@ -24,16 +24,30 @@
                     <tr class="text-center">
                         <th class="text-center">ID</th>
                         <th class="text-center">Nome</th>
-                        <th class="text-center">Selecionar</th>
+                        <th class="text-center">Previsão</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="text-center" ng-repeat="x in cidades">
                         <td>{{x.Id }}</td>
                         <td>{{x.Nome}}</td>
-                        <td><button class="btn btn-default">Selecionar</button></td>
+                        <td>
+                            <button class="btn btn-default" ng-click="Teste(x.Id);">
+                                Ver Previsão
+                            </button>
+                        </td>
                     </tr>
+
                 </tbody>
+                <tfoot class="">
+                    <tr class="text-right">
+                        <td colspan="3">
+                            <button class="btn btn-default" ng-click="redirecionarFormCadastro();">
+                                <span class="fa fa-plus-circle" aria-hidden="true"></span> Cadastrar Cidade
+                            </button>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>

@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Weather.BLL.Base;
 using Weather.Domain.Model;
-using Weather.Proxy;
-using Weather.Proxy.Client;
 
 namespace Weather.BLL.Manager
 {
@@ -17,15 +16,20 @@ namespace Weather.BLL.Manager
                 listaCidades = unitOfWork.GetManager<Cidade>().GetBy().ToList();
             }
 
-            //ClientConfig.ApiUrl = "http://api.openweathermap.org/data/2.5";
-            //ClientConfig.ApiKey = "a75f4b55aed47dd3b7b65f58a242855f";
-                       
-            //var result = CurrentWeather.GetByCityName("Rio de Janeiro");
-
             return listaCidades;
 
+        }
 
-           
+        public object CadastrarCidade(string nomeCidade)
+        {
+            var cidade = new Cidade(nomeCidade, 10);
+            
+            using (var unitOfWork = new UnitOfWorkManager())
+            {
+                unitOfWork.GetManager<Cidade>().Add(cidade);
+                unitOfWork.Commit();
+            }
+            return cidade;
         }
     }
 }
