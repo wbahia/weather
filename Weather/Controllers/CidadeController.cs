@@ -38,9 +38,16 @@ namespace Weather.Controllers
 
         public ActionResult CadastrarCidade(string nomeCidade)
         {
-            var response = new CidadeManager().CadastrarCidade(nomeCidade);
+            try
+            {
+                var response = new CidadeManager().CadastrarCidade(nomeCidade);
+                return Json(new JavaScriptSerializer().Serialize(response));
+            }
+            catch (Exception)
+            {
+                return Json(null, JsonRequestBehavior.AllowGet);
+            }
 
-            return Json(new JavaScriptSerializer().Serialize(response));
         }
 
         public ActionResult RedirecionarCadastro()

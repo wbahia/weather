@@ -1,15 +1,14 @@
 ﻿WeatherApp.controller('cidadeController', ['$scope', '$http', '$window', 'weatherService', function ($scope, $http, $window, weatherService) {
 
     $scope.initCidade = function () {
-        
+
         $scope.cidades = {};
         $scope.loading = false;
         getCidades($scope, weatherService, $scope.rootUrl);
-        
+
     }
 
     $scope.redirecionarFormCadastro = function () {
-
         window.location.pathname = 'Cidade/RedirecionarCadastro'
     }
 
@@ -24,35 +23,32 @@
             nomeCidade: $scope.Cidade
         };
 
-        $http
-            .post('/Cidade/CadastrarCidade/', data)
-            .success(function (data, status, headers, config) {
-                successFn();
-            })
-            .errors(function (data, status, headers, config) {
-                errorFn();
-            });
+
+        return $http.post('/Cidade/CadastrarCidade/', data).then(function (result) {
+
+            var retorno = JSON.parse(result.data);
+
+            if (!retorno.Sucesso) {
+                $window.alert(retorno.Mensagem);
+            }
+            else {
+                $window.alert('Cadastro realizado com sucesso!');
+                window.location.pathname = 'Home/Index'
+            }
+        });
     }
-
-    function successFn() {
-        alert("success");
-    };
-
-    function errorFn() {
-        alert("error");
-    };
 
 }]);
 
 function getCidades($scope, weatherService) {
-    
+
     $scope.loading = true;
     weatherService.request('/Cidade/ObterCidades', 'Get', null).then(function (result) {
-        
+
         if (result != null) {
             $scope.cidades = result.Lista;
         }
-       
+
         $scope.loading = false;
 
     }, function (data) {
