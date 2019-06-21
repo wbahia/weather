@@ -57,7 +57,7 @@ renderData = (forecast) => {
         dayBlock.innerHTML =
             `<div class="forecast-item__heading">${name}</div>
       <div class="forecast-item__info">
-      <i class="wi ${day.Icon}"></i>
+      <xsmall>${day.Description}</xsmall>
       <span class="degrees">${Math.round(day.TempMin) + '°C/' + Math.round(day.TempMax) + '°C'}
       <i class="wi wi-degrees"></i></span></div>`;
         FORECAST.appendChild(dayBlock);
